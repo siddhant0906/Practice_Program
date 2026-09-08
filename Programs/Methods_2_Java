@@ -1,0 +1,54 @@
+package Method1;
+
+public class Siddhant {
+	
+	// Method With ReturnType And No Parameter.
+	
+	int A()
+	{
+		int age = 21;
+		
+		return age;
+	}
+	String Z()
+	{
+		String X = "Siddhant ";
+		String Y = "Chinchkar";
+		return X + Y;
+	}
+	short S()
+	{
+		return 20 * 5;
+	}
+	float F()
+	{
+		float a = 100.0f;
+		return a;
+	}
+	float K()
+	{
+		return 300.04f;
+	}
+	public static void main(String[] args)
+	{
+		Siddhant T = new Siddhant();
+		short S = T.S();
+		System.out.println(S);
+		
+		float F = T.F();
+		System.out.println(F);
+		
+		float K = T.K();
+		System.out.println(K);
+		
+		String Z = T.Z();
+		System.out.println(Z);
+		
+		int A = T.A();
+		System.out.println(A);
+		
+		
+	}
+	
+
+}

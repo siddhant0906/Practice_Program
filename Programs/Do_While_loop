@@ -1,0 +1,327 @@
+package Looping_Sta;
+import java.util.Scanner;
+public class Do_While_loop {
+	public static void main(String[] args)
+	{
+		int i = 1;
+		do
+	{
+			System.out.println("Swami Samarth");
+			i++;
+		}
+		while(i<=10);
+		
+		// print even Numbers From  1 To 100
+		
+		int i = 1;
+		do
+		{
+			if(i % 2 == 0)
+			{
+				System.out.println(i);
+			}
+			i++;
+		}
+		while(i<=100);
+		
+		// print odd Number from 1 to 100
+		int i  =1;
+		do
+		{
+			if(i % 2 != 0)
+			{
+				System.out.println(i);
+			}
+			i++;
+		}
+		while(i<=100);
+		
+		//print  number from 100 to 1
+		int i = 100;
+		do
+		{
+			System.out.println(i);
+			i--;
+		}
+		while(i>=1);
+		
+		// print only those Numbers Are Divisible By 3 And 5 from 1 to 100.
+		
+		int i = 1;
+		do
+		{
+			if(i % 3 == 0 && i % 5 ==0)
+			{
+				System.out.println(i);
+			}
+			i++;
+		}
+		while(i<=100);
+		
+		// Factorial 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Any Number :");
+		int num = sc.nextInt();
+		
+		int fact = 1;
+		int i = 1;
+		do
+		{
+			fact = fact * i;
+			i++;
+		}
+		while(i<=num);
+		System.out.println("Factorial ="+fact);
+			
+		
+		// Banking Application using Do While Loop
+		Scanner sc = new Scanner(System.in);
+		double Bankbalance = 5000;
+		int choice;
+		do
+		{
+			System.out.println("1. Deposite");
+			System.out.println("2. Withdraw");
+			System.out.println("3. CheckBankbalance ");
+			System.out.println("4. Exit");
+			System.out.println("Enter Your Choice :");
+			choice = sc.nextInt();
+			if(choice == 1)
+			{
+				System.out.println("Enter Deposit Amount :");
+				int deposit = sc.nextInt();
+			
+			if(deposit > 0)
+			{
+				Bankbalance += deposit;
+				System.out.println("Deposit Success ... Balance ="+Bankbalance);
+			}
+			else
+			{
+				System.out.println("Invalid Amount..");
+			}
+		}
+			else if(choice == 2)
+			{
+				System.out.println("Enter Withdraw Amount :");
+				int withdraw = sc.nextInt();
+				if(withdraw > 0)
+				{
+					if(withdraw <= Bankbalance)
+					{
+						Bankbalance -= withdraw;
+						System.out.println("Withdraw Success... Balance ="+Bankbalance);
+					}
+					else
+					{
+						System.out.println("Invalid Amount...");
+					}
+					
+				}
+			}
+			else if(choice == 3)
+			{
+				System.out.println("Your balance is ="+Bankbalance);
+			}
+			else if(choice == 4)
+			{
+				System.out.println("Thank You For Usin Our Application...");
+			}
+			else
+			{
+				System.out.println("Invalid Choice...");
+			}
+		}
+			while(choice != 4);
+	
+		// movie Booking Application 
+		 String movie = "";
+	        int qty = 0;
+	        double ticketPrice = 0;
+	        double discount = 0;
+	        double finalPrice = 0;
+
+	        Scanner Sc = new Scanner(System.in);
+
+	        int Choice;
+
+	        do {
+	            System.out.println("\n========= Movie Ticket Booking =========");
+	            System.out.println("1. Saiyara - Rs.250");
+	            System.out.println("2. Dhurandhar - Rs.170");
+	            System.out.println("3. Border 2 - Rs.450");
+	            System.out.println("4. Kantara - Rs.200");
+	            System.out.println("5. Exit");
+	            System.out.print("Enter your Choice (1 to 5): ");
+	            choice = sc.nextInt();
+
+	            if (choice == 1) {
+	                movie = "Saiyara";
+	                System.out.println("You Selected Saiyara");
+	                System.out.print("How many Tickets You Want: ");
+	                qty = sc.nextInt();
+	                ticketPrice = qty * 250;
+	            }
+
+	            else if (choice == 2) {
+	                movie = "Dhurandhar";
+	                System.out.println("You Selected Dhurandhar");
+	                System.out.print("How many Tickets You Want: ");
+	                qty = sc.nextInt();
+	                ticketPrice = qty * 170;
+	            }
+
+	            else if (choice == 3) {
+	                movie = "Border 2";
+	                System.out.println("You Selected Border 2");
+	                System.out.print("How many Tickets You Want: ");
+	                qty = sc.nextInt();
+	                ticketPrice = qty * 450;
+	            }
+
+	            else if (choice == 4) {
+	                movie = "Kantara";
+	                System.out.println("You Selected Kantara");
+	                System.out.print("How many Tickets You Want: ");
+	                qty = sc.nextInt();
+	                ticketPrice = qty * 200;
+	            }
+
+	            else if (choice == 5) {
+	                System.out.println("Thank You For Using Our Application...");
+	                break;
+	            }
+
+	            else {
+	                System.out.println("Invalid Choice...");
+	                continue;
+	            }
+
+	            // Discount Calculation
+	            if (ticketPrice > 2000) {
+	                discount = ticketPrice * 0.10; //10%
+	            }
+	            else if (ticketPrice > 1000) {
+	                discount = ticketPrice * 0.05; //5%
+	            }
+	            else if (ticketPrice > 500) {
+	                discount = ticketPrice * 0.02; //2%
+	            }
+	            else {
+	                discount = 0;
+	                System.out.println("No Discount");
+	            }
+
+	            finalPrice = ticketPrice - discount;
+
+	            // Ticket Details
+	            System.out.println("\n========= Final Ticket =========");
+	            System.out.println("Movie Name      : " + movie);
+	            System.out.println("Quantity        : " + qty);
+	            System.out.println("Ticket Price    : Rs." + ticketPrice);
+	            System.out.println("Discount        : Rs." + discount);
+	            System.out.println("Final Price Pay : Rs." + finalPrice);
+	        } 
+			while (choice != 5);
+
+		
+		// Student Management Syatem 
+		  Scanner sc = new Scanner(System.in);
+
+	        int id = 0;
+	        String name = "";
+	        String address = "";
+	        String college = "";
+	        int age = 0;
+	        double marks = 0;
+	        char grade = ' ';
+
+	        int choice;
+
+	        do {
+	            System.out.println("\n===== Student Management System =====");
+	            System.out.println("1. Add Student");
+	            System.out.println("2. Apply Grade");
+	            System.out.println("3. Display Student Data");
+	            System.out.println("4. Exit");
+	            System.out.print("Enter Your Choice : ");
+	            choice = sc.nextInt();
+
+	            if (choice == 1) {
+
+	                System.out.print("Enter Student ID : ");
+	                id = sc.nextInt();
+
+	                sc.nextLine();
+
+	                System.out.print("Enter Student Name : ");
+	                name = sc.nextLine();
+
+	                System.out.print("Enter Student Address : ");
+	                address = sc.nextLine();
+
+	                System.out.print("Enter Student Age : ");
+	                age = sc.nextInt();
+
+	                sc.nextLine();
+
+	                System.out.print("Enter College Name : ");
+	                college = sc.nextLine();
+
+	                System.out.print("Enter Student Marks : ");
+	                marks = sc.nextDouble();
+
+	                System.out.println("Student Added Successfully...");
+	            }
+
+	            else if (choice == 2) {
+
+	                if (marks >= 90) {
+	                    grade = 'A';
+	                }
+	                else if (marks >= 80) {
+	                    grade = 'B';
+	                }
+	                else if (marks >= 70) {
+	                    grade = 'C';
+	                }
+	                else if (marks >= 60) {
+	                    grade = 'D';
+	                }
+	                else if (marks >= 40) {
+	                    grade = 'E';
+	                }
+	                else {
+	                    grade = 'F';
+	                }
+
+	                System.out.println("Grade Applied Successfully...");
+	            }
+
+	            else if (choice == 3) {
+
+	                System.out.println("\n===== Student Details =====");
+	                System.out.println("Student ID      : " + id);
+	                System.out.println("Student Name    : " + name);
+	                System.out.println("Address         : " + address);
+	                System.out.println("Age             : " + age);
+	                System.out.println("College Name    : " + college);
+	                System.out.println("Marks           : " + marks);
+	                System.out.println("Grade           : " + grade);
+	            }
+
+	            else if (choice == 4) {
+	                System.out.println("Thank You For Using Student Management System...");
+	            }
+
+	            else {
+	                System.out.println("Invalid Choice...");
+	            }
+
+	        } 
+
+	        while (choice != 4);
+	  }
+    
+ }
+	

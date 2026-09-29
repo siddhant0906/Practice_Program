@@ -1,0 +1,18 @@
+package transfer_Control;
+
+public class Break_Statement {
+	public static void main(String[] args)
+	{
+int SearchNumber = 21;
+		
+		for(int i =1; i<=100; i++)
+		{
+			if(i == SearchNumber)
+			{
+				System.out.println("Number is Found :"+i);
+				break;
+			}
+			System.out.println("Cheacking :"+i);
+		}
+		System.out.println("Program Is End.....");
+}

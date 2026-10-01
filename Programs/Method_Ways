@@ -1,0 +1,155 @@
+package OOP;
+
+public class Methods_Ways {
+
+    // 1. Method with No Return Type and With Parameters
+
+    void add(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    void Sub(int a, int b) {
+        System.out.println(a - b);
+    }
+
+    void Mul(int a, int b) {
+        System.out.println(a * b);
+    }
+
+    void Div(int x, int y) {
+        System.out.println(x / y);
+    }
+
+    // 2. Method with No Return Type and No Parameters
+
+    void Add() {
+        int a = 10;
+        int b = 20;
+        int c = a + b;
+        System.out.println(c);
+    }
+
+    void Sub() {
+        int a = 20;
+        int b = 2;
+        int c = a - b;
+        System.out.println(c);
+    }
+
+    void Mul() {
+        int a = 200;
+        int b = 5;
+        int c = a * b;
+        System.out.println(c);
+    }
+
+    void Div() {
+        int a = 200;
+        int b = 10;
+        int c = a / b;
+        System.out.println(c);
+    }
+
+    // 3. Method with Return Type and No Parameters
+
+    float add() {
+        return 123.5f;
+    }
+
+    String get() {
+        return "Siddhant";
+    }
+
+    short take() {
+        return 50;
+    }
+
+    int sum() {
+        return 500;
+    }
+
+    String M() {
+        String x = "Chinchkar";
+        String y = " Company";
+        return x + y;
+    }
+
+    // 4. Method with Return Type and With Parameters
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    String get(String Name) {
+        return Name.toUpperCase();
+    }
+
+    int getNumbers() {
+        return 300;
+    }
+
+    public static void main(String[] args) {
+
+        // 1. Method with No Return Type and With Parameters
+
+        Methods_Ways e1 = new Methods_Ways();
+        e1.add(10, 20);
+        e1.add(100, 500);
+        e1.add(45, 65);
+
+        System.out.println("==============");
+
+        Methods_Ways e2 = new Methods_Ways();
+        e2.Sub(200, 50);
+        e2.Sub(300, 235);
+        e2.Sub(9846, 5634);
+
+        System.out.println("==============");
+
+        Methods_Ways e3 = new Methods_Ways();
+        e3.Mul(123, 10);
+        e3.Mul(20, 2);
+
+        System.out.println("==============");
+
+        Methods_Ways e4 = new Methods_Ways();
+        e4.Div(50, 10);
+        e4.Div(100, 5);
+
+        System.out.println("==============");
+
+        // 2. Method with No Return Type and No Parameters
+
+        Methods_Ways A1 = new Methods_Ways();
+        A1.Add();
+        A1.Sub();
+        A1.Mul();
+        A1.Div();
+
+        System.out.println("==============");
+
+        // 3. Method with Return Type and No Parameters
+
+        Methods_Ways x1 = new Methods_Ways();
+        String s1 = x1.M();
+        String s2 = x1.get();
+        int s3 = x1.sum();
+
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+
+        System.out.println("==============");
+
+        // 4. Method with Return Type and With Parameters
+
+        Methods_Ways q1 = new Methods_Ways();
+        String s = q1.get("Shri swami samarth");
+        int d1 = q1.getNumbers();
+        double d2 = q1.add(10, 20);
+
+        System.out.println(s);
+        System.out.println(d1);
+        System.out.println(d2);
+    }
+}

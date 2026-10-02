@@ -1,0 +1,51 @@
+package variables_In_java;
+
+public class Employee {
+	int id;  // instance variable
+	String name;
+	double salary;
+	
+	void add(int i)
+	{
+		int x = 20;  // Local variable
+		int y = 40;
+		System.out.println(x+y);
+	}
+	
+	static String Companyname = "TCS";  // Static Variable
+	public static void main(String[] args)
+	{
+		Employee e1 = new Employee();
+		e1.id=101;
+		e1.name = "Siddhant";
+		e1.salary = 35000.00;
+		System.out.println(Employee.Companyname);
+		System.out.println(e1.id);
+		System.out.println(e1.name);
+		System.out.println(e1.salary);
+		
+		System.out.println();
+		Employee e2 = new Employee();
+		e2.id=102;
+		e2.name = "Shreyash";
+		e2.salary = 25000.00;
+		System.out.println(Employee.Companyname);
+		System.out.println(e2.id);
+		System.out.println(e2.name);
+		System.out.println(e2.salary);
+		
+		System.out.println();
+		Employee e3 = new Employee();
+		e3.id=103;
+		e3.name = "Raj";
+		e3.salary = 45000.00;
+		System.out.println(Employee.Companyname);
+		System.out.println(e3.id);
+		System.out.println(e3.name);
+		System.out.println(e3.salary);
+		
+		
+	}
+	
+
+}

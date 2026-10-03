@@ -1,0 +1,31 @@
+package Constructor_In_java;
+
+public class Constructor_chaining {
+	
+	Constructor_chaining()
+	{
+		this(11);
+		System.out.println(" 0 Parametarizer Constructor ...");
+	}
+	Constructor_chaining(int a)
+	{
+		this(21, "siddhant");
+		System.out.println(" 1 Parametarizer Constructor ...");
+	}
+	Constructor_chaining(int a, String Name)
+	{
+		System.out.println(" 2 Parametarizer Constructor ...");
+	}
+	
+	public static void main(String[] args)
+	{
+		new Constructor_chaining();
+		new Constructor_chaining(11);
+		
+		
+
+		
+	}
+	
+
+}
